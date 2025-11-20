@@ -43,4 +43,4 @@ def update_missing_data(items, days_back):
         for future in as_completed(tasks):
             print(future.result())
 
-    print("\nFilter 3 finished")
+    print("Filter 3 finished")
