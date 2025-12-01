@@ -33,7 +33,7 @@ def process_symbol(item, days_back):
 def update_missing_data(items, days_back):
     print("Filter 3: Parallel downloading\n")
 
-    MAX_WORKERS = 80  # Optimized for your CPU (22 logical cores)
+    MAX_WORKERS = 80  
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         tasks = {
             executor.submit(process_symbol, item, days_back): item["symbol"]
