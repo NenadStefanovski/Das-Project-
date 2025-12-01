@@ -10,7 +10,7 @@ def process_symbol(item, days_back):
     symbol = item["symbol"]
     last_date = item["last_date"]
 
-    # If no existing data → request last X days
+    # If no existing data then request last X days
     if last_date is None:
         start = today_utc() - timedelta(days=days_back)
     else:
